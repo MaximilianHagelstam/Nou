@@ -1,3 +1,3 @@
 # Nou
 
-Custom stream donation message system
+Bot for connecting streams to a discord server
