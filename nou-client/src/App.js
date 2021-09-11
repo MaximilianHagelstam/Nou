@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   return (
-    <h1 style={{ color: 'red', fontSize: '48px' }}>
+    <h1 style={{ color: '#2978B5', fontSize: '40px', fontFamily: 'Poppins' }}>
       {messageUser} says "{messageBody}"
     </h1>
   );
