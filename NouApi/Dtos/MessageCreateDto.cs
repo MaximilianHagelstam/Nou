@@ -1,12 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace NouApi.Models
+namespace NouApi.Dtos
 {
-    public class Message
+    public class MessageCreateDto
     {
-        [Key]
-        public int Id { get; set; }
-
         [Required]
         public string Body { get; set; }
 
