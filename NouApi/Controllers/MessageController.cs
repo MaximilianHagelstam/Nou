@@ -26,12 +26,9 @@ namespace NouApi.Controllers
         [HttpGet]
         public ActionResult<Message> GetLatestMessage()
         {
-            return Ok(new Message
-            {
-                Id = 1,
-                Body = "Hello team",
-                User = "James"
-            });
+            var message = _repository.GetLatestMessage();
+
+            return Ok(_mapper.Map<MessageReadDto>(message));
         }
 
         [HttpPost]

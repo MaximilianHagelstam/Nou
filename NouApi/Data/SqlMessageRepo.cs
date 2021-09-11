@@ -25,7 +25,7 @@ namespace NouApi.Data
 
         public Message GetLatestMessage()
         {
-            return _context.Messages.FirstOrDefault();
+            return _context.Messages.OrderByDescending(m => m.Id).FirstOrDefault();
         }
 
         public bool SaveChanges()
