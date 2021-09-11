@@ -28,7 +28,6 @@ namespace SpeckBot
                 .BuildServiceProvider();
 
             string token = File.ReadAllText("token.txt");
-            Console.WriteLine(token);
 
             _client.Log += ClientLog;
 
