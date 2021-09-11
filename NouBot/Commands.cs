@@ -11,5 +11,11 @@ namespace Noubot
         {
             await ReplyAsync("Hello!");
         }
+
+        [Command("message")]
+        public async Task SendMessage(string message)
+        {
+            await ReplyAsync(message);
+        }
     }
 }
