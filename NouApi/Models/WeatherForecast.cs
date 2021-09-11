@@ -1,6 +1,6 @@
 using System;
 
-namespace api.Models
+namespace NouApi.Models
 {
     public class WeatherForecast
     {
