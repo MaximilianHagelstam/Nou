@@ -3,7 +3,6 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 using Discord.Commands;
-using NouBot;
 
 namespace Noubot
 {
@@ -18,13 +17,9 @@ namespace Noubot
         }
 
         [Command("message")]
-        public async Task SendMessage(string body)
+        public async Task SendMessage(string message)
         {
-            Message message = new Message(body, "James");
-
-            HttpResponseMessage response = await client.PostAsJsonAsync("https://localhost:44333/message", message);
-
-            Console.WriteLine(response);
+            await client.PostAsJsonAsync("https://localhost:44333/message", new { Body = message, User = "James" });
 
             await ReplyAsync("Message sent succesfully");
         }
